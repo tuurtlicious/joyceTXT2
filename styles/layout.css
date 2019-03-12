@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text');
+
+/** MOBILE VERSION**/
+
+body {
+    background: url('../images/sun_mobile_query.jpg') no-repeat;
+    font-family: Roboto mono;
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+h1 {
+    font-family: Libre Barcode 39 text;
+    text-align: center;
+}
+
+#clock {
+    /* color: white; */
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#date {
+    font-size: 1.7em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    font-size: 16px;
+
+}
+
+/** LAPTOP VERSION**/
+@media only screen and (min-width: 699px){
+    body {
+        font-family: Roboto mono;
+        display: grid;
+    }
+}
+
+/** DESKTOP VERSION **/
+@media only screen and (min-width: 1366px){
+
+}
