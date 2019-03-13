@@ -13,17 +13,20 @@ function startTime() {
     var hour = today.getHours();
     var minute = today.getMinutes();
     var second = today.getSeconds();
-    var day =  today.getDate();
-    var month = today.getMonth() + 1;
-    var year = today.getFullYear();
+    
+    //var day =  today.getDate();
+    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    var formatDate = today.getDate() + '-' + months[today.getMonth()] + '-' + today.getFullYear();
+    document.getElementById("date").innerHTML = formatDate;
+
+
+    //var year = today.getFullYear();
     minute = checkTime(minute);
     second = checkTime(second);
     document.getElementById('clock').innerHTML =
     hour + ":" + minute + ":" + second;
     var t = setTimeout(startTime, 500);
-    var date = day + "-" + month + "-" + year;
     document.getElementById("clock").innertext = date;
-    document.getElementById("date").textContent = date;
   }
   function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
